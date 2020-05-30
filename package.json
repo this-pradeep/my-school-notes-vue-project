@@ -1,0 +1,31 @@
+{
+  "name": "my-school-notes-vue-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "compilecss": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "core-js": "^3.6.5",
+    "postcss-cli": "^7.1.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.4.6",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
