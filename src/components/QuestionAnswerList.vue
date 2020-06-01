@@ -49,8 +49,8 @@
         </button>
         </div>
       </div>
-      <div v-for="( QA, index ) in QAfiltered" :key="QA.id" class="container mx-auto mt-10 pb-8 border-b-2">
-        <div class="flex flex-row justify-between">
+      <question-answer v-for="( QA, index ) in QAfiltered" :key="QA.id" :QA="QA" :index="index" @removedQA="removeQA" @editedQA="editQA" @completeCheck="completedCheck" class="container mx-auto mt-10 pb-8 border-b-2" />
+        <!-- <div class="flex flex-row justify-between">
           <div class="flex">
             <span class="mr-2 text-lg font-medium text-gray-600">Question {{QA.id}} </span>
             <h3 :class="{'line-through bg-gray-300': QA.completed}" class="ml-4 text-lg font-medium text-gray-600">{{QA.question}}</h3>
@@ -76,15 +76,20 @@
         <div class="flex">
           <span class="mr-2 text-lg font-medium text-gray-600">Answer</span>
           <p :class="{'line-through bg-gray-300': QA.completed}" class="text-left ml-10 text-lg  text-gray-600">{{QA.answer}}</p>
-        </div>
+        </div> -->
       </div>
     </div>
-  </div>
 </template>
 
 <script>
+import QuestionAnswer from './QuestionAnswer.vue';
+
 export default {
   name: 'QuestionAnswerList',
+  components: {
+    QuestionAnswer,
+  },
+
   props: {},
   data() {
     return {
